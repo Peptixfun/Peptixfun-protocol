@@ -1,0 +1,46 @@
+/*
+  Peptix design tokens. The ONLY file allowed to hold colour literals.
+  Provenance: every hex below is a real pixel read from the brand and reference
+  assets (k-means, 6 clusters, centroid snapped to the nearest real pixel).
+  Notation: file @ x,y (pixel coordinate in the source image).
+*/
+:root {
+  --c-night-0: #0b0529;   /* reference/PEPTIX 1 @ 464,358 : deepest field */
+  --c-night-1: #130d33;   /* reference/PEPTIX 1 @ 1556,4 : page base, 79% of pixels */
+  --c-night-2: #120c2e;   /* reference/PEPTIX 1 @ 1556,13 : base shade */
+  --c-panel:   #18113a;   /* brand/LOGO PEPTIX PNG @ 0,0 : logo plate */
+  --c-dusk:    #3b3f6e;   /* brand/LOGO PEPTIX JPG @ 900,1119 : logo shadow ring */
+  --c-violet:  #382d8b;   /* reference/PEPTIX 1 @ 1168,548 : accent body */
+  --c-steel:   #7b81a5;   /* brand/LOGO PEPTIX JPG @ 900,877 : logo mid tone */
+  --c-peri:    #807dce;   /* reference/PEPTIX 1 @ 1120,533 : accent light */
+  --c-silver:  #bec3d8;   /* brand/LOGO PEPTIX PNG @ 1100,626 : logo edge */
+  --c-mist:    #dddefa;   /* reference/PEPTIX 1 @ 1296,414 : soft text */
+  --c-white:   #fdfdfe;   /* brand/LOGO PEPTIX PNG...png @ 966,510 : logo ink */
+
+  --bg: var(--c-night-1);
+  --bg-deep: var(--c-night-0);
+  --surface: color-mix(in srgb, var(--c-panel) 72%, transparent);
+  --surface-solid: var(--c-panel);
+  --line: color-mix(in srgb, var(--c-peri) 22%, transparent);
+  --line-strong: color-mix(in srgb, var(--c-peri) 46%, transparent);
+  --fg: var(--c-white);
+  --fg-soft: var(--c-mist);
+  --fg-dim: color-mix(in srgb, var(--c-mist) 62%, transparent);
+  --fg-mute: var(--c-steel);
+  --accent: var(--c-peri);
+  --accent-deep: var(--c-violet);
+  --up: var(--c-mist);
+  --down: var(--c-steel);
+  --glow: color-mix(in srgb, var(--c-peri) 38%, transparent);
+  --spot: color-mix(in srgb, var(--c-peri) 20%, transparent);
+
+  --font: "Geist", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "Geist Mono", "JetBrains Mono", ui-monospace, "Courier New", monospace;
+
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-io: cubic-bezier(0.65, 0, 0.35, 1);
+  --container: 1440px;
+  --gutter: 48px;
+  --tap: 44px;
+}
+@media (max-width: 720px) { :root { --gutter: 20px; } }

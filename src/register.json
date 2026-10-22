@@ -1,0 +1,73 @@
+{
+  "records": {
+    "chain": {
+      "label": "Chain",
+      "state": "stated",
+      "value": "Solana",
+      "rpc": "https://solana-rpc.publicnode.com",
+      "source": "client statement",
+      "scope": "batch-level",
+      "checked": "2026-10-22"
+    },
+    "domain": {
+      "label": "Domain",
+      "state": "stated",
+      "value": "peptix.fun",
+      "url": "https://peptix.fun",
+      "source": "client statement",
+      "scope": "batch-level",
+      "checked": "2026-10-22"
+    },
+    "market-source": {
+      "label": "Market source",
+      "state": "stated",
+      "boosts": "https://api.dexscreener.com/token-boosts/top/v1",
+      "pairs": "https://api.dexscreener.com/tokens/v1/solana/",
+      "source": "client statement",
+      "scope": "batch-level",
+      "checked": "2026-10-22"
+    },
+    "ca": {
+      "label": "Contract address",
+      "state": "absent",
+      "source": "client statement",
+      "scope": "batch-level",
+      "checked": "2026-10-22"
+    },
+    "x": {
+      "label": "X",
+      "state": "absent",
+      "source": "client statement",
+      "scope": "batch-level",
+      "checked": "2026-10-22"
+    },
+    "github": {
+      "label": "GitHub",
+      "state": "absent",
+      "source": "client statement",
+      "scope": "batch-level",
+      "checked": "2026-10-22"
+    },
+    "path-hub": {
+      "label": "Lab bench",
+      "state": "absent",
+      "source": "client statement",
+      "scope": "batch-level",
+      "checked": "2026-10-22"
+    },
+    "path-desk": {
+      "label": "Draft desk",
+      "state": "absent",
+      "source": "client statement",
+      "scope": "batch-level",
+      "checked": "2026-10-22"
+    },
+    "path-mesh": {
+      "label": "Signal mesh",
+      "state": "absent",
+      "source": "client statement",
+      "scope": "batch-level",
+      "checked": "2026-10-22"
+    }
+  }
+}

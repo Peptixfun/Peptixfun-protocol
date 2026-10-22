@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Peptix | Curiosity, priced in public</title>
+<meta name="description" content="Peptix is a Solana token for builders who want the lab door left ajar. Follow the live board of top Solana pools.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Peptix">
+<meta property="og:title" content="Peptix | Curiosity, priced in public">
+<meta property="og:description" content="A Solana token with a live market board built in.">
+<meta property="og:image" content="assets/peptix-logo.png">
+<meta name="theme-color" content="{{THEME}}">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-view="overview">
+<div class="progress" aria-hidden="true"><i id="progress"></i></div>
+
+<div class="top">
+  <div class="container bar">
+    <a class="brand" href="#overview" aria-label="Peptix home">
+      <img src="assets/peptix-logo.png" alt="" width="34" height="34">
+      <b>Peptix</b>
+    </a>
+    <nav class="socials" aria-label="Social">
+{{SOCIALS}}
+    </nav>
+  </div>
+  <div class="container">
+{{CA}}
+  </div>
+</div>
+
+<div class="strip">
+  <div class="pill" id="status" data-s="sync" role="status"><span class="dot" aria-hidden="true"></span><span id="status-text">Syncing</span></div>
+  <div class="ticker" aria-label="Live ticker"><div class="ticker-track" id="ticker"><span class="tk">&mdash;</span></div></div>
+</div>
+
+<main id="panel-overview" role="tabpanel" aria-labelledby="tab-overview">
+  <section class="hero" aria-label="Introduction">
+    <div class="mesh" aria-hidden="true"></div>
+    <div class="layer far" data-depth="14" aria-hidden="true">
+      <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+    </div>
+    <div class="layer orbit" data-depth="26" aria-hidden="true">
+      <svg viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid slice">
+        <g transform="rotate(-14 500 300)"><ellipse cx="500" cy="300" rx="470" ry="150"/><circle cx="968" cy="296" r="7"/></g>
+        <g transform="rotate(18 500 300)"><ellipse cx="500" cy="300" rx="380" ry="116"/><circle cx="122" cy="318" r="5"/></g>
+      </svg>
+    </div>
+    <div class="layer mol" data-depth="42" aria-hidden="true">
+      <svg viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid slice">
+        <g><line x1="860" y1="70" x2="920" y2="104"/><line x1="920" y1="104" x2="920" y2="172"/><line x1="920" y1="172" x2="860" y2="206"/><line x1="860" y1="206" x2="800" y2="172"/><line x1="800" y1="172" x2="800" y2="104"/><line x1="800" y1="104" x2="860" y2="70"/><circle cx="860" cy="70" r="9"/><circle cx="920" cy="104" r="7"/><circle cx="920" cy="172" r="9"/><circle cx="860" cy="206" r="6"/><circle cx="800" cy="172" r="8"/><circle cx="800" cy="104" r="7"/></g>
+        <g><line x1="120" y1="420" x2="176" y2="452"/><line x1="176" y1="452" x2="176" y2="516"/><line x1="176" y1="516" x2="120" y2="548"/><line x1="120" y1="548" x2="64" y2="516"/><line x1="64" y1="516" x2="64" y2="452"/><line x1="64" y1="452" x2="120" y2="420"/><circle cx="120" cy="420" r="8"/><circle cx="176" cy="452" r="6"/><circle cx="176" cy="516" r="8"/><circle cx="120" cy="548" r="7"/><circle cx="64" cy="516" r="6"/><circle cx="64" cy="452" r="8"/></g>
+      </svg>
+    </div>
+    <img class="emblem" src="assets/peptix-logo.png" alt="" width="240" height="240">
+
+    <div class="hero-copy">
+      <div class="eyebrow reveal"><span class="dot" aria-hidden="true"></span>Built on {{CHAIN}}</div>
+      <h1 class="reveal">Curiosity, <span>priced in public.</span></h1>
+      <p class="lead reveal">Peptix is a {{CHAIN}} token for builders who want the lab door left ajar. Watch the market move while the mission takes shape.</p>
+      <a class="cta reveal" href="#market" data-go="market">See the board <span aria-hidden="true">&rarr;</span></a>
+    </div>
+    <span class="scroll-hint" aria-hidden="true"></span>
+
+    <div class="tiles">
+      <div class="container">
+        <div class="tile spot reveal"><div class="k">Tokens tracked</div><div class="v" id="t-count">&mdash;</div></div>
+        <div class="tile spot reveal"><div class="k">24h volume</div><div class="v" id="t-vol">&mdash;</div></div>
+        <div class="tile spot reveal"><div class="k">Deepest pool</div><div class="v" id="t-liq">&mdash;</div></div>
+        <div class="tile spot reveal"><div class="k">Chain</div><div class="v">{{CHAIN}}</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="paths" aria-label="Roadmap rails">
+{{PATHS}}
+  </section>
+
+  <section class="section" id="pulse">
+    <div class="container">
+      <div class="section-head">
+        <div class="label reveal">Market pulse</div>
+        <h2 class="reveal">Ten pools, <span class="dim">moving right now.</span></h2>
+      </div>
+      <div class="scroll-wrap reveal">
+        <button class="arrow prev hide" aria-label="Scroll left" type="button">&#8249;</button>
+        <div class="cards" id="cards"></div>
+        <button class="arrow next" aria-label="Scroll right" type="button">&#8250;</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="steps">
+        <div class="step reveal"><div class="num">01</div><div><h3>Watch.</h3><p>Follow the board and see which pools carry real flow.</p></div></div>
+        <div class="step reveal"><div class="num">02</div><div><h3>Verify.</h3><p>Check any address on the board against its source before acting.</p></div></div>
+        <div class="step reveal"><div class="num">03</div><div><h3>Join.</h3><p>Step into the community once its channels are published.</p></div></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<main id="panel-market" role="tabpanel" aria-labelledby="tab-market" hidden>
+  <section class="section" style="border-top:0;padding-top:88px">
+    <div class="container">
+      <div class="section-head">
+        <div class="label reveal">Live board</div>
+        <h2 class="reveal">Where the <span class="dim">volume sits.</span></h2>
+      </div>
+      <div class="catalog reveal">
+        <div class="ttl">Top 10</div>
+        <label class="search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span class="sr">Filter board</span><input id="q" type="text" placeholder="Filter by name or symbol" autocomplete="off"></label>
+        <div class="chips" id="sorts" role="group" aria-label="Sort">
+          <button class="chip on" type="button" data-sort="vol">Volume</button>
+          <button class="chip" type="button" data-sort="chg">Change</button>
+          <button class="chip" type="button" data-sort="liq">Liquidity</button>
+        </div>
+      </div>
+      <div class="table reveal" role="table" aria-label="Top Solana pools">
+        <div class="tr th" role="row"><span role="columnheader">#</span><span role="columnheader">Token</span><span class="r" role="columnheader">Price</span><span class="r" role="columnheader">24h</span><span class="r" role="columnheader">Volume</span><span class="r" role="columnheader">Liquidity</span><span class="r" role="columnheader"><span class="sr">Copy</span></span></div>
+        <div id="rows"></div>
+      </div>
+      <div class="err" id="err" hidden>Source unreachable. Retrying automatically.</div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="container">
+    <a class="brand" href="#overview" aria-label="Peptix home"><img src="assets/peptix-logo.png" alt="" width="34" height="34"><b>Peptix</b></a>
+    <div class="meta">
+{{TAGS}}
+    </div>
+  </div>
+</footer>
+
+<div class="switch" role="tablist" aria-label="Views">
+  <span class="sel" aria-hidden="true"></span>
+  <button id="tab-overview" type="button" role="tab" aria-selected="true" aria-controls="panel-overview" data-view="overview">Overview</button>
+  <button id="tab-market" type="button" role="tab" aria-selected="false" aria-controls="panel-market" tabindex="-1" data-view="market">Market</button>
+</div>
+<div class="sr" id="live" aria-live="polite"></div>
+
+<script type="application/json" id="register-data">{{REGISTER}}</script>
+<script src="app.js" defer></script>
+</body>
+</html>

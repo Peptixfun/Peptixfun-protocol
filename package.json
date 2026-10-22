@@ -1,0 +1,13 @@
+{
+  "name": "peptix",
+  "version": "1.0.0",
+  "description": "Peptix on Solana. Curiosity, priced in public.",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "gates": "node scripts/gates.mjs",
+    "serve": "node scripts/serve.mjs"
+  }
+}
